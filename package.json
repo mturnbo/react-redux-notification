@@ -11,10 +11,25 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0"
+    "eslint-plugin-import": "^2.14.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^2.0.0",
+    "mini-css-extract-plugin": "^0.4.2",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.19.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
   },
   "dependencies": {},
-  "main": "index.js"
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server",
+    "lint": "eslint --cache --ignore-path .gitignore --ext .jsx,.js ."
+  }
 }
