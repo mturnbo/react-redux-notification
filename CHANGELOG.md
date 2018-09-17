@@ -1,5 +1,8 @@
 # React Redux Notification Example
 
+#### v.0.5.0
+* *Feature*: Added Redux
+
 #### v.0.4.0
 * *Feature*: Added Jest with Enzyme and basic render tests
 * *Fix*: Updated .eslintrc
