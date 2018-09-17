@@ -8,7 +8,7 @@ export const showNotification = (options = {}) => ({
   payload: options
 });
 
-export const closeNotification = (status) => ({
+export const hideNotification = (status) => ({
   type: HIDE_NOTIFICATION,
   payload: status
 });

@@ -1,33 +1,27 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Notification from 'components/Notification';
 import PropTypes from 'prop-types';
+import store from '../../store';
+
 
 class NotificationContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      display: props.display
-    };
-    this.showNotification = this.showNotification.bind(this);
-    this.hideNotification = this.hideNotification.bind(this);
-  }
-
   showNotification() {
-    this.setState({
-      display: true
+    store.dispatch({
+      type: 'SHOW_NOTIFICATION'
     });
   }
 
   hideNotification() {
-    this.setState({
-      display: false
+    store.dispatch({
+      type: 'HIDE_NOTIFICATION'
     });
   }
 
   render() {
     return (
       <div>
-        <Notification {...this.props} display={this.state.display} closeHandler={this.hideNotification} />
+        <Notification {...this.props.notification} closeHandler={this.hideNotification} />
         <button type="button" onClick={this.showNotification}>SHOW NOTIFICATION</button>
       </div>
     );
@@ -40,13 +34,10 @@ NotificationContainer.propTypes = {
   display: PropTypes.bool
 };
 
-NotificationContainer.defaultProps = {
-  title: 'NOTIFICATION',
-  message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et'
-      + ' dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex'
-      + ' ea commodo consequat.',
-  display: false
+const mapStateToProps = state => {
+  return {
+    notification: state.notificationReducers
+  }
 };
 
-
-export default NotificationContainer;
+export default connect(mapStateToProps)(NotificationContainer);
