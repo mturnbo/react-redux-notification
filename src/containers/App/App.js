@@ -15,7 +15,7 @@ const App = () => (
   <Provider store={store}>
     <Router>
       <div className="app-container">
-        <h1>React Redux Notification System</h1>
+        <h1>React Redux Notification Example</h1>
         <ul className="navigation">
           <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>

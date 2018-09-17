@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Notification from 'components/Notification';
 import PropTypes from 'prop-types';
 import actions from '../../actions';
+import './NotificationContainer.scss';
 
 class NotificationContainer extends React.Component {
   showNotification() {
@@ -17,7 +18,7 @@ class NotificationContainer extends React.Component {
     return (
       <div>
         <Notification {...this.props.notification} closeHandler={this.hideNotification} />
-        <button type="button" onClick={this.showNotification}>SHOW NOTIFICATION</button>
+        <button type="button" className="notification-button" onClick={this.showNotification}>SHOW NOTIFICATION</button>
       </div>
     );
   }

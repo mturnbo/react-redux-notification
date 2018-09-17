@@ -4,6 +4,10 @@ const Home = () => (
   <div>
     <h2>Home</h2>
     <p>
+      This single page app illustrates how to use Redux to manage notification messages displayed by a React
+      component.  Messages can be displayed immediately or after a routing event.
+    </p>
+    <p>
       Bacon ipsum dolor amet frankfurter hamburger picanha porchetta chuck. Doner salami burgdoggen ball tip, short
       loin meatloaf andouille pork belly picanha sirloin pancetta. Strip steak chicken drumstick jowl burgdoggen
       buffalo tongue cupim kevin capicola doner andouille bresaola ground round. Brisket cow jowl salami prosciutto
