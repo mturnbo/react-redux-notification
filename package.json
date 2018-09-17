@@ -1,7 +1,7 @@
 {
   "name": "react-redux-notification",
   "description": "React Redux Notification Example",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Marcus E. Turnbo <marcus@emarcus.com>",
   "license": "MIT",
   "repository": {
@@ -17,6 +17,7 @@
     "css-loader": "^1.0.0",
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.1.0",
+    "eslint-import-resolver-webpack": "^0.10.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
