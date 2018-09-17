@@ -1,8 +1,22 @@
 {
+  "env": {
+    "browser": true
+  },
   "extends": "airbnb",
-  "rules" :{
+  "rules": {
     "max-len": ["error", {"code": 120}],
     "arrow-parens": 0,
-    "comma-dangle": 0
+    "comma-dangle": 0,
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx"] }
+    ],
+    "import/no-unresolved": [
+      2,
+      { caseSensitive: false }
+    ]
+  },
+  "settings": {
+    "import/resolver": "webpack"
   }
 }
