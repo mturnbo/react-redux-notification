@@ -2,20 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Notification from 'components/Notification';
 import PropTypes from 'prop-types';
-import store from '../../store';
-
+import actions from '../../actions';
 
 class NotificationContainer extends React.Component {
   showNotification() {
-    store.dispatch({
-      type: 'SHOW_NOTIFICATION'
-    });
+    actions.showNotification();
   }
 
   hideNotification() {
-    store.dispatch({
-      type: 'HIDE_NOTIFICATION'
-    });
+    actions.hideNotification();
   }
 
   render() {
