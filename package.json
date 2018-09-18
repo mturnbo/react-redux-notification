@@ -1,7 +1,7 @@
 {
   "name": "react-redux-notification",
   "description": "React Redux Notification Example",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": "Marcus E. Turnbo <marcus@emarcus.com>",
   "license": "MIT",
   "repository": {

@@ -1,4 +1,8 @@
-# React Redux Notification System
+# React Redux Notification Example
+
+#### v.0.4.0
+* *Feature*: Added Jest with Enzyme and basic render tests
+* *Fix*: Updated .eslintrc
 
 #### v.0.3.0
 * *Feature*: Added Notification Component
