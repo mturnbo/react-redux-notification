@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notification Component Renders 1`] = `
+<Notification
+  closeHandler={[MockFunction]}
+  display={true}
+  message="Blah blah blah"
+  title="Test"
+>
+  <div
+    className="notification show"
+  >
+    <button
+      className="notification-close"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      X
+    </button>
+    <div
+      className="notification-title"
+    >
+      Test
+    </div>
+    <div
+      className="notification-message"
+    >
+      Blah blah blah
+    </div>
+  </div>
+</Notification>
+`;
