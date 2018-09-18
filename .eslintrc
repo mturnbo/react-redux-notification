@@ -4,7 +4,10 @@
   },
   "extends": "airbnb",
   "rules": {
-    "max-len": ["error", {"code": 120}],
+    "max-len": [
+      "error",
+      {"code": 120}
+    ],
     "arrow-parens": 0,
     "comma-dangle": 0,
     "react/jsx-filename-extension": [
@@ -13,7 +16,7 @@
     ],
     "import/no-unresolved": [
       2,
-      { caseSensitive: false }
+      { "caseSensitive": false }
     ]
   },
   "settings": {
