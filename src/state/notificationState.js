@@ -1,5 +1,6 @@
 export default {
   title: '',
   message: '',
-  display: false
+  display: false,
+  delay: false,
 };

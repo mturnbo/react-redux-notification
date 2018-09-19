@@ -1,11 +1,24 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import Notification from 'components/Notification';
 import PropTypes from 'prop-types';
 import actions from '../../actions';
 import './NotificationContainer.scss';
 
 class NotificationContainer extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentWillMount() {
+    this.props.history.listen(() => this.props.notification.delay && this.showNotification());
+  }
+
+  setNotification() {
+    actions.setNotification();
+  }
+
   showNotification() {
     actions.showNotification();
   }
@@ -17,8 +30,9 @@ class NotificationContainer extends React.Component {
   render() {
     return (
       <div>
-        <Notification {...this.props.notification} closeHandler={this.hideNotification} />
+        {this.props.notification && <Notification {...this.props.notification} closeHandler={this.hideNotification} />}
         <button type="button" className="notification-button" onClick={this.showNotification}>SHOW NOTIFICATION</button>
+        <button type="button" className="notification-button" onClick={this.setNotification}>SET NOTIFICATION</button>
       </div>
     );
   }
@@ -33,7 +47,7 @@ NotificationContainer.propTypes = {
 const mapStateToProps = state => {
   return {
     notification: state.notificationReducers
-  }
+  };
 };
 
-export default connect(mapStateToProps)(NotificationContainer);
+export default withRouter(connect(mapStateToProps)(NotificationContainer));

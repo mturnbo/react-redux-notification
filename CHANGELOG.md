@@ -1,5 +1,8 @@
 # React Redux Notification Example
 
+#### v.1.0.0
+* *Feature*: Added set notification for display after route change
+
 #### v.0.5.0
 * *Feature*: Added Redux
 

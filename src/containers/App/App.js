@@ -3,7 +3,8 @@ import { Provider } from 'react-redux';
 import store from '../../store';
 import {
   HashRouter as Router,
-  Route, NavLink
+  Route,
+  NavLink
 } from 'react-router-dom';
 import Home from 'pages/Home';
 import About from 'pages/About';
