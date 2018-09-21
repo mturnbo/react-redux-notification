@@ -18,7 +18,6 @@ const testShowNotification = {
   delay: false
 };
 
-
 describe('actions', () => {
   it('should create an action to set a notification', () => {
     const expectedAction = {

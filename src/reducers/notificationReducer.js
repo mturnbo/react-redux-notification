@@ -12,17 +12,17 @@ export default function (state = notification, action) {
     case SET_NOTIFICATION:
       return {
         ...state,
-        display: false,
         title: action.title || randomMsg.title,
         message: action.message || randomMsg.message,
+        display: false,
         delay: true
       };
     case SHOW_NOTIFICATION:
       return {
         ...state,
-        display: true,
         title: action.title || randomMsg.title,
         message: action.message || randomMsg.message,
+        display: true,
         delay: false
       };
     case HIDE_NOTIFICATION:
