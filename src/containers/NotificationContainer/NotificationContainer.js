@@ -10,6 +10,9 @@ import './NotificationContainer.scss';
 class NotificationContainer extends React.Component {
   constructor(props) {
     super(props);
+    this.formatMessage = this.formatMessage.bind(this);
+    this.setNotification = this.setNotification.bind(this);
+    this.showNotification = this.showNotification.bind(this);
   }
 
   componentWillMount() {
@@ -34,6 +37,7 @@ class NotificationContainer extends React.Component {
 
   showNotification() {
     actions.updateNotification({
+      ...this.formatMessage(),
       display: true,
       delay: false
     });
