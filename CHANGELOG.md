@@ -1,7 +1,13 @@
 # React Redux Notification Example
 
+#### v.1.1.0
+* *Feature*: Simplified actions and reducer - multiple actions and 
+             reducer types were unnecessary
+
 #### v.1.0.0
 * *Feature*: Added set notification for display after route change
+* *Feature*: Added tests for notification actions
+* *Feature*: Added tests for notification actions
 
 #### v.0.5.0
 * *Feature*: Added Redux

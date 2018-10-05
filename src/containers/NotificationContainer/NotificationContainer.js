@@ -4,27 +4,49 @@ import { withRouter } from 'react-router';
 import Notification from 'components/Notification';
 import PropTypes from 'prop-types';
 import actions from '../../actions';
+import messages from './messages';
 import './NotificationContainer.scss';
 
 class NotificationContainer extends React.Component {
   constructor(props) {
     super(props);
+    this.formatMessage = this.formatMessage.bind(this);
+    this.setNotification = this.setNotification.bind(this);
+    this.showNotification = this.showNotification.bind(this);
   }
 
   componentWillMount() {
     this.props.history.listen(() => this.props.notification.delay && this.showNotification());
   }
 
+  formatMessage() {
+    const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+    return {
+      title: this.props.notification.title || randomMsg.title,
+      message: this.props.notification.message || randomMsg.message
+    };
+  }
+
   setNotification() {
-    actions.setNotification();
+    actions.updateNotification({
+      ...this.formatMessage(),
+      display: false,
+      delay: true
+    });
   }
 
   showNotification() {
-    actions.showNotification();
+    actions.updateNotification({
+      ...this.formatMessage(),
+      display: true,
+      delay: false
+    });
   }
 
   hideNotification() {
-    actions.hideNotification();
+    actions.updateNotification({
+      display: false
+    });
   }
 
   render() {
@@ -41,7 +63,8 @@ class NotificationContainer extends React.Component {
 NotificationContainer.propTypes = {
   title: PropTypes.string,
   message: PropTypes.string,
-  display: PropTypes.bool
+  display: PropTypes.bool,
+  delay: PropTypes.bool
 };
 
 const mapStateToProps = state => {

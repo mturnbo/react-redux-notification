@@ -1,36 +1,17 @@
-import {
-  SET_NOTIFICATION,
-  SHOW_NOTIFICATION
-} from '../constants/notificationConstants';
+import { UPDATE_NOTIFICATION } from '../constants/notificationConstants';
 import * as actions from './notificationActions';
 
-const testSetNotification = {
-  title: 'Test Notification',
-  message: 'Notification has been set',
-  display: false,
-  delay: true
-};
-
-const testShowNotification = {
-  title: 'Test Notification',
-  message: 'Notification has been shown',
-  display: true,
-  delay: false
+const testNotification = {
+  title: 'Notification title',
+  message: 'Notification message'
 };
 
 describe('actions', () => {
-  it('should create an action to set a notification', () => {
+  it('should create an action to update a notification', () => {
     const expectedAction = {
-      type: SET_NOTIFICATION,
-      payload: testSetNotification,
+      type: UPDATE_NOTIFICATION,
+      payload: testNotification,
     };
-    expect(actions.setNotification(testSetNotification)).toEqual(expectedAction);
-  });
-  it('should create an action to show a notification', () => {
-    const expectedAction = {
-      type: SHOW_NOTIFICATION,
-      payload: testShowNotification
-    };
-    expect(actions.showNotification(testShowNotification)).toEqual(expectedAction);
+    expect(actions.updateNotification(testNotification)).toEqual(expectedAction);
   });
 });
